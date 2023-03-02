@@ -1,0 +1,195 @@
+//Dice Rolls using a while loop. 
+
+import java.util.Random; 
+
+public class dice-rolls-java {
+
+	public static void main(String[] args) {
+		   final int NUMBER = 10000;  // Number of dice rolls
+
+		      // A random number generator used in
+		      // simulating the rolling of dice
+		      Random generator = new Random();
+
+		      int die1Value;       // Value of the first die
+		      int die2Value;       // Value of the second die
+		      int count = 0;       // Total number of dice rolls
+		      int snakeEyes = 0;   // Number of snake eyes rolls
+		      int twos = 0;        // Number of double two rolls
+		      int threes = 0;      // Number of double three rolls
+		      int fours = 0;       // Number of double four rolls
+		      int fives = 0;       // Number of double five rolls
+		      int sixes = 0;       // Number of double six rolls
+
+		      while(count < NUMBER)
+		      {
+		    	  die1Value = generator.nextInt(6) + 1;
+		    	  die2Value = generator.nextInt(6) + 1; 
+		    	  
+		    	  if(die1Value == die2Value) {
+		    	  if(die1Value == 1) 
+		    		  die1Value = snakeEyes++; 
+		    	  else if(die1Value == 2)
+		    		  die1Value = twos++; 
+		    	  else if(die1Value == 3)
+		    		  die1Value = threes++; 
+		    	  else if(die1Value == 4)
+		    		  die1Value = fours++; 
+		    	  else if(die1Value == 5)
+		    		  die1Value = fives++; 
+		    	  else if(die1Value == 6)
+		    		  die1Value = sixes++; 
+		      }
+		      	count++;
+		   }
+		      
+		      System.out.println ("You rolled snake eyes " +
+		                          snakeEyes + " out of " +
+		                          count + " rolls.");
+		      System.out.println ("You rolled double twos " +
+		                          twos + " out of " + count +
+		                          " rolls.");
+		      System.out.println ("You rolled double threes " +
+		                          threes + " out of " + count +
+		                          " rolls.");
+		      System.out.println ("You rolled double fours " +
+		                          fours + " out of " + count +
+		                          " rolls.");
+		      System.out.println ("You rolled double fives " +
+		                          fives + " out of " + count +
+		                          " rolls.");
+		      System.out.println ("You rolled double sixes " +
+		                          sixes + " out of " + count +
+		                          " rolls.");
+	}
+}
+
+---
+//Dice rolls using a Do-While loop
+
+import java.util.Random; 
+
+
+public class dice-rolls-do-java {
+	public static void main(String[] args) {
+		   final int NUMBER = 10000;  // Number of dice rolls
+
+		      // A random number generator used in
+		      // simulating the rolling of dice
+		      Random generator = new Random();
+
+		      int die1Value;       // Value of the first die
+		      int die2Value;       // Value of the second die
+		      int count = 0;       // Total number of dice rolls
+		      int snakeEyes = 0;   // Number of snake eyes rolls
+		      int twos = 0;        // Number of double two rolls
+		      int threes = 0;      // Number of double three rolls
+		      int fours = 0;       // Number of double four rolls
+		      int fives = 0;       // Number of double five rolls
+		      int sixes = 0;       // Number of double six rolls
+
+		     
+		      do { 
+		    	  die1Value = generator.nextInt(6)+1;
+		    	  die2Value=generator.nextInt(6)+1;
+		    if(die1Value == die2Value) {
+		      if(die1Value == 1)
+		    	  die1Value = snakeEyes++;
+		      else if(die1Value == 2)
+		    	  die1Value = twos++;
+		      else if(die1Value == 3)
+		    	  die1Value = threes++;
+		      else if(die1Value == 4)
+		    	  die1Value = fours++;
+		      else if(die1Value == 5)
+		    	  die1Value = fives++;
+		      else if(die1Value == 6)
+		    	  die1Value = sixes++;
+		      }
+		      count++;
+		      }while(count < NUMBER);
+		    	  
+		  
+		      System.out.println ("You rolled snake eyes " +
+		                          snakeEyes + " out of " +
+		                          count + " rolls.");
+		      System.out.println ("You rolled double twos " +
+		                          twos + " out of " + count +
+		                          " rolls.");
+		      System.out.println ("You rolled double threes " +
+		                          threes + " out of " + count +
+		                          " rolls.");
+		      System.out.println ("You rolled double fours " +
+		                          fours + " out of " + count +
+		                          " rolls.");
+		      System.out.println ("You rolled double fives " +
+		                          fives + " out of " + count +
+		                          " rolls.");
+		      System.out.println ("You rolled double sixes " +
+		                          sixes + " out of " + count +
+		                          " rolls.");
+		      }
+	}
+
+---
+//And finally dice rolls using a for loop
+
+import java.util.Random; 
+
+public class DiceSimulation_For {
+	public static void main(String[] args) {
+		final int NUMBER = 10000;
+		
+		Random generator = new Random(); 
+		
+		int die1Value; 
+		int die2Value;
+		int count = 0;
+		int snakeEyes =0; 
+		int twos = 0;
+		int threes = 0;
+		int fours = 0;
+		int fives = 0;
+		int sixes = 0;
+		
+		for(count = 0; count < NUMBER; count++) {
+			die1Value = generator.nextInt(6)+1; 
+			die2Value = generator.nextInt(6)+1;
+			
+			if(die1Value == die2Value) {
+			if(die1Value == 1)
+					die1Value = snakeEyes++;
+			else if(die1Value == 2)
+					die1Value = twos++;
+			else if(die1Value == 3)
+					die1Value = threes++;
+			else if(die1Value == 4)
+					die1Value = fours++;
+			else if(die1Value == 5)
+					die1Value = fives++;
+			else if(die1Value == 6)
+					die1Value = sixes++;
+			}
+			
+		}
+		  System.out.println ("You rolled snake eyes " +
+                  snakeEyes + " out of " +
+                  count + " rolls.");
+		  System.out.println ("You rolled double twos " +
+                  twos + " out of " + count +
+                  " rolls.");
+		  System.out.println ("You rolled double threes " +
+                  threes + " out of " + count +
+				  " rolls.");
+		  System.out.println ("You rolled double fours " +
+                  fours + " out of " + count +
+				  " rolls.");
+		  System.out.println ("You rolled double fives " +
+                  fives + " out of " + count +
+                  " rolls.");
+		  System.out.println ("You rolled double sixes " + sixes + " out of " + count +
+                  " rolls.");
+}
+	}
+
+
