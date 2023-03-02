@@ -1,9 +1,3 @@
-/** Name: James Gillanders
- * Date: 02.03.2023
- * Program Synopsis: This program is designed to calculate the gas milage of a user
- 
-  */
-
 //Importing the Java scanner function 
 import java.util.Scanner;
 
